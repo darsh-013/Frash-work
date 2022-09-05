@@ -1,0 +1,47 @@
+/*.App {*/
+/*  text-align: center;*/
+/*}*/
+
+/*Footer*/
+.footer{
+  display: flex;
+  flex-direction: row;
+}
+.footer-1{
+  width:40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-right: 1px solid gray;
+}
+.footer-2{
+  /*border-bottom: 1px solid gray;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer-end{
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+}
+
+@media only screen and (max-width: 600px){
+  .footer{
+    flex-direction: column;
+  }
+  .footer-1{
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer-2{
+    flex-direction: column;
+    border-top: 1px solid gray;
+    padding-top: 1rem;
+  }
+  .footer-end{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+  }
+}
