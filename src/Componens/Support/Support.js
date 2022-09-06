@@ -6,8 +6,14 @@ import p2 from "./Images/p2.PNG";
 import p3 from "./Images/p3.PNG";
 import "../../Home/Styles.css";
 import Footer from "../../Footer";
+import {useNavigate} from "react-router-dom";
 
 export const Support = () => {
+    let navigate = useNavigate();
+    const handleOnClick = () =>{
+        navigate('/registration');
+    }
+
     return (
         <div>
             <div className="header container">
@@ -16,8 +22,10 @@ export const Support = () => {
                         service</h1>
                     <p style={{fontSize: "1.5vw"}}>Engage in more meaningful conversations every day, across every
                         channel, with every customer</p>
-                    <button className="btn p-3 my-2" style={{backgroundColor: "#5D35D7", color: "white"}}><strong>START
-                        FREE TRIAL</strong></button>
+                    <button className="btn p-3 my-2"
+                            style={{backgroundColor: "#5D35D7", color: "white"}}
+                            onClick={handleOnClick}
+                    ><strong>START FREE TRIAL</strong></button>
                 </div>
                 <div>
                     <img src={header} alt="header" style={{width: "40vw"}}/>

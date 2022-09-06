@@ -3,9 +3,16 @@ import header from "./Images/header.PNG";
 import owenership from "./Images/owenership.PNG"
 import gartner from "./Images/gartner.jpg"
 import dcissue from './Images/dcissue.PNG';
-import './Styles.css';
 import Footer from "../../Footer";
+import {useNavigate} from "react-router";
+import './Styles.css';
+
 export const Features = () => {
+    let navigate = useNavigate();
+    const handleOnClick = () =>{
+        navigate('/registration');
+    }
+
     return (
         <div>
             <div className="" style={{backgroundColor:'#F7F7F7'}}>
@@ -13,8 +20,10 @@ export const Features = () => {
                     <div className="my-5" >
                         <h1 style={{fontSize: "3vw", fontWeight: "bold"}}>It takes a team to deliver great customer support</h1>
                         <p style={{fontSize: "1.5vw"}}>Freshdesk helps you work together with team members from across the company to provide quick and consistent answers to your customers.</p>
-                        <button className="btn p-3 my-2" style={{backgroundColor: "#5D35D7", color: "white"}}><strong>START
-                            FREE TRIAL</strong></button>
+                        <button className="btn p-3 my-2"
+                                style={{backgroundColor: "#5D35D7", color: "white"}}
+                                onClick={handleOnClick}
+                        ><strong>START FREE TRIAL</strong></button>
                     </div>
                     <div>
                         <img src={header} alt="header" style={{width:"40vw"}}/>

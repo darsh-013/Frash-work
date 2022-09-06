@@ -3,5 +3,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*position: absolute;*/
+    /*width: 110%;*/
+    /*height: 100%;*/
+    /*top: -37%;*/
+    /*left: -1%;*/
+    z-index: 1;
+    background-image: linear-gradient(90deg,#0090d7 0,#EA9D3E);
+    /*transform: rotate(5deg);*/
+    /*background: linear-gradient(20deg,#5D35D7,white);*/
+    /*background-color: #F1F1F1;*/
+}
+.item{
+    padding:1rem;
     background-color: #F1F1F1;
+    border-radius: 10px;
 }

@@ -1,20 +1,30 @@
 import React from 'react';
 import header from "../Images/header.jpg";
 import phone from "../Images/phone.PNG";
-import chat from '../Images/chat.PNG'
+import chat from '../Images/chat.PNG';
+import {useNavigate} from "react-router";
 import '../Styles.css';
 
+
 export const Header = () => {
+    let navigate = useNavigate();
+    const handleOnClick = () =>{
+        navigate('/registration');
+    }
+
     return (
         <div>
-            <div className="c-header container">
+            <div className="c-header container my-2">
                 <div className="">
                     <h1 style={{fontSize: "3vw", fontWeight: "bold"}}>Delight your customers with effortless customer
                         service</h1>
                     <p style={{fontSize: "1.5vw"}}>Engage in more meaningful conversations every day, across every
                         channel, with every customer</p>
-                    <button className="btn p-3 my-2" style={{backgroundColor: "#0B1320", color: "white"}}><strong>START
-                        FREE TRIAL</strong></button>
+                    <button className="btn p-3 my-2"
+                            style={{backgroundColor: "#0B1320", color: "white"}}
+                            onClick={handleOnClick}
+                    >
+                        <strong>START FREE TRIAL</strong></button>
                 </div>
                 <div>
                     <img src={header} alt="header" style={{height:"20rem", width:'100%'}} />

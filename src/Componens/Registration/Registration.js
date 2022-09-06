@@ -90,7 +90,7 @@ export const Registration = (props) => {
             }
         }
         alert("registered successfully");
-        navigate('/');
+        navigate('/signin');
     };
 //==========================================================================
     useEffect( ()=>{
@@ -328,7 +328,7 @@ export const Registration = (props) => {
                         </div>
                             {
                                 props.isEditItem ? <button type='submit' className="btn" onClick={() => onSubmit()}>Edit</button> :
-                                    <button type="submit" className="btn my-3" style={{backgroundColor:"#5D35D7",color:"white"}} onClick={() => onSubmit()}>Register</button>
+                                    <button type="submit" className="btn my-3" style={{backgroundColor:"#0B1320",color:"white"}} onClick={() => onSubmit()}>Sign Up for free</button>
                             }
                         </div>
 

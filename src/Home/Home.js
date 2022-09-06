@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "../Navbar";
-import Header from "./pages/Header";
+import Header from "../Componens/Resources/Header";
 import Hamley from "./pages/Hamley";
 import FreshDesk from "./pages/FreshDesk";
 import Footer from "../Footer";
