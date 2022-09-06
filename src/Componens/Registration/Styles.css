@@ -1,0 +1,7 @@
+.addUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F1F1;
+}
