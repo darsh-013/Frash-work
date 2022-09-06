@@ -8,6 +8,7 @@
     /*height: 100%;*/
     /*top: -37%;*/
     /*left: -1%;*/
+    content: "";
     z-index: 1;
     background-image: linear-gradient(90deg,#0090d7 0,#EA9D3E);
     /*transform: rotate(5deg);*/

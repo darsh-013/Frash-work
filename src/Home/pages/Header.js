@@ -1,10 +1,10 @@
 import React from 'react';
-import header from "../../Home/Images/header.PNG"
-import h1 from "../../Home/Images/h1.PNG";
-import h2 from "../../Home/Images/h2.PNG"
-import h3 from "../../Home/Images/h3.PNG"
+import header from "../Images/header.PNG"
+import h1 from "../Images/h1.PNG";
+import h2 from "../Images/h2.PNG"
+import h3 from "../Images/h3.PNG"
 import {useNavigate} from "react-router-dom";
-import "../../Home/Styles.css";
+import "../Styles.css";
 
 export const Header = () => {
     let navigate = useNavigate();
