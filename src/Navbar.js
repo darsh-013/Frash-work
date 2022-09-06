@@ -12,16 +12,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import logo from './logo.svg';
 import "./App.css";
 
 const drawerWidth = 240;
-const navItems = ['Product', 'Feature', 'Prizing','Resources','Sign In'];
-
 
 export default function Navbar(props) {
-    const { window } = props;
+    const {window} = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let navigate = useNavigate();
 
@@ -29,37 +27,60 @@ export default function Navbar(props) {
         setMobileOpen(!mobileOpen);
     };
 
-    const handleOnClick = () =>{
+    const handleOnClick = () => {
         navigate('./signin');
     };
-    const handleSupport = () =>{
+    const handleSupport = () => {
         navigate('/support');
-    }
-    const handleFeatures = () =>{
+    };
+    const handleFeatures = () => {
         navigate('/features');
-    }
-    const handleResource = () =>{
+    };
+    const handleResource = () => {
         navigate('/resources');
-    }
-    const handleClick = () =>{
+    };
+    const handleContact = () => {
+        navigate('/contact');
+    };
+    const handleClick = () => {
         navigate('/');
-    }
+    };
 
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                Funny-Memes
+        <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
+            <Typography variant="h6" sx={{my: 2}}>
+                Fresh-work
             </Typography>
-            <Divider />
+            <Divider/>
             <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText secondary={item} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+
+                <ListItem key="product" disablePadding>
+                    <ListItemButton sx={{textAlign: 'center'}}>
+                        <ListItemText primary="Product" onClick={handleSupport}/>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem key="product" disablePadding>
+                    <ListItemButton sx={{textAlign: 'center'}}>
+                        <ListItemText primary="Features" onClick={handleFeatures}/>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem key="product" disablePadding>
+                    <ListItemButton sx={{textAlign: 'center'}}>
+                        <ListItemText primary="Resources" onClick={handleResource}/>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem key="product" disablePadding>
+                    <ListItemButton sx={{textAlign: 'center'}}>
+                        <ListItemText primary="Contact Us" onClick={handleContact}/>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem key="product" disablePadding>
+                    <ListItemButton sx={{textAlign: 'center'}}>
+                        <ListItemText primary="Sign In" onClick={handleOnClick}/>
+                    </ListItemButton>
+                </ListItem>
+
             </List>
         </Box>
     );
@@ -68,54 +89,57 @@ export default function Navbar(props) {
 
     return (
         <Box>
-            <AppBar sx={{ bgcolor: "white"}} >
-                <Toolbar sx={{justifyContent:"center"}}>
-                    <Toolbar  >
-                        <Button key="Funny-Memes" sx={{ color: 'black'}}
+            <AppBar sx={{bgcolor: "white"}}>
+                <Toolbar className="navbar-item">
+                    <Toolbar>
+                        <Button key="Fresh-work" sx={{color: 'black'}}
                                 onClick={handleClick}
                         >
-                            <img src={logo} alt="meme" />
+                            <img src={logo} alt="logo"/>
                         </Button>
                     </Toolbar>
 
-                    <Box sx={{ display: "flex", flexDirection:"row", gap:"15px" }}>
 
-                        <Button key="The Team" sx={{color:"black", textTransform: 'none', display: { xs: 'none', sm: 'block' }}}
+                    <Box sx={{display: "flex", flexDirection: "row", gap: "15px"}}>
+
+                        <Button key="The Team"
+                                sx={{color: "black", textTransform: 'none', display: {xs: 'none', sm: 'block'}}}
                                 onClick={handleSupport}
                         >
                             <strong>Product</strong>
                         </Button>
-                        <Button key="latest" sx={{ color: 'black', textTransform: 'none', display: { xs: 'none', sm: 'block' }}}
+                        <Button key="feature"
+                                sx={{color: 'black', textTransform: 'none', display: {xs: 'none', sm: 'block'}}}
                                 onClick={handleFeatures}
                         >
                             <strong>Features</strong>
                         </Button>
-                        <Button key="Quotes" sx={{ color: 'black', textTransform: 'none', display: { xs: 'none', sm: 'block' }}}
-                        >
-                            <strong>Prizing</strong>
-                        </Button>
-                        <Button key="social" sx={{ color: 'black', textTransform: 'none', display: { xs: 'none', sm: 'block' }}}
+
+                        <Button key="resource"
+                                sx={{color: 'black', textTransform: 'none', display: {xs: 'none', sm: 'block'}}}
                                 onClick={handleResource}
                         >
                             <strong>Resources</strong>
                         </Button>
-                        <Button key="contact" sx={{ color: 'black', textTransform: 'none', display: { xs: 'none', sm: 'block' }}}
-                                onClick={handleClick}
+                        <Button key="contact"
+                                sx={{color: 'black', textTransform: 'none', display: {xs: 'none', sm: 'block'}}}
+                                onClick={handleContact}
                         >
                             <strong>Contact Us</strong>
                         </Button>
 
-                        <Divider sx={{borderLeft: "1px solid black", margin:'5px'}}/>
-                        <Button sx={{ color: 'black', textTransform: 'none', display: { xs: 'none', sm: 'block' }}} onClick={handleOnClick}><strong>Sign In</strong></Button>
+                        <Divider sx={{borderLeft: "1px solid black", margin: '5px'}}/>
+                        <Button sx={{color: 'black', textTransform: 'none', display: {xs: 'none', sm: 'block'}}}
+                                onClick={handleOnClick}><strong>Sign In</strong></Button>
                     </Box>
 
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{mr: 2, display: {sm: 'none'}}}
                     >
-                        <MenuIcon />
+                        <MenuIcon style={{color:"black"}}/>
                     </IconButton>
                 </Toolbar>
             </AppBar>
@@ -129,15 +153,15 @@ export default function Navbar(props) {
                         keepMounted: true,
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        display: {xs: 'block', sm: 'none'},
+                        '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
                     }}
                 >
                     {drawer}
                 </Drawer>
             </Box>
-            <Box component="main" sx={{ p: 0 }}>
-                <Toolbar />
+            <Box component="main" sx={{p: 0}}>
+                <Toolbar/>
 
             </Box>
         </Box>

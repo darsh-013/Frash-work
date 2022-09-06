@@ -92,8 +92,8 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div style={{backgroundColor:"#F1F1F1",height:"4rem"}} className="text-center d-flex align-items-center">
-                <div className="footer-end container ">
+            <div style={{backgroundColor:"#F1F1F1"}} className="text-center footer-bar ">
+                <div className="footer-end">
                     <p>Terms of Service</p>
                     <p>Privacy Notice</p>
                     <p>Takedown Policy</p>

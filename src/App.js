@@ -11,6 +11,7 @@ import Support from "./Componens/Support/Support";
 import Features from "./Componens/Features/Features";
 import './App.css';
 import Resources from "./Componens/Resources/Resources";
+import Contact from "./Componens/ContactUs/Contact";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
               />
               <Route path="/resources"
                      element={<Resources/>}
+              />
+              <Route path="/contact"
+                     element={<Contact/>}
               />
           </Routes>
       </Router>
