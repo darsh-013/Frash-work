@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import "./Styles.css"
 import Navbar from "../../Navbar";
+import "./Styles.css";
 
 export const Login = () => {
     const [items, setItems] = useState(
@@ -14,11 +14,11 @@ export const Login = () => {
         setItems({...items, [name]: value})
     }
     return (
-        <div className="my-5 text-center">
+        <div className="my-5 text-center container">
             <div>
                 <Navbar/>
             </div>
-            <div className="my-5">
+            <div className="my-5 login" >
                 <h1 className="my-5" style={{fontWeight:"bold"}}>Log in to your Freshdesk account</h1>
                 <h5>Please enter your Freshdesk domain name and we'll help you out!</h5>
                 <form className="form">
@@ -48,8 +48,8 @@ export const Login = () => {
                     <button className="btn p-2 my-2" type="submit" style={{backgroundColor: "#5D35D7", color: "white"}}><strong>PROCEED</strong></button>
                 </form>
             </div>
-            <div style={{backgroundColor:"#F1F1F1",height:"4rem"}} className="text-center d-flex align-items-center fixed-bottom">
-                <div className="d-flex gap-4 container ">
+            <div style={{backgroundColor:"#F1F1F1"}} className="text-center footer-bar  fixed-bottom">
+                <div className="footer-end">
                     <p>Terms of Service</p>
                     <p>Privacy Notice</p>
                     <p>Takedown Policy</p>
