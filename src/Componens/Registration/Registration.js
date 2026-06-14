@@ -97,7 +97,7 @@ export const Registration = (props) => {
         setTimeout( ()=>{
             id.index && getUser(id.index);
         }, 100);
-    }, [] );
+    }, [id.index] );
 
     const getUser=(id)=>{
         UserDataService.get(id)
